@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.SMABoundless/orcid",
+  "description": "Search ORCID researcher profiles, retrieve works, and export citations",
+  "repository": {
+    "url": "https://github.com/SMABoundless/orcid-mcp-server.git",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "orcid-mcp-server",
+      "version": "1.0.0",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "description": "ORCID API client ID from https://orcid.org/developer-tools",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "ORCID_CLIENT_ID"
+        },
+        {
+          "description": "ORCID API client secret",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "ORCID_CLIENT_SECRET"
+        }
+      ]
+    }
+  ]
+}
